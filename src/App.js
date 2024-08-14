@@ -6,7 +6,7 @@ function App() {
   const [location, setLocation] = useState('London'); // Default location
   const [weatherData, setWeatherData] = useState(null); // State to store weather data
   
-  const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=cb490e9a1d93f41acbabadabc1de7293`
+  const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_API_KEY}`;
 
   async function getData() {
     try {
